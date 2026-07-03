@@ -6,4 +6,8 @@ people = [
 ]
 # Task: Sort the list by 'score' descending WITHOUT using a lambda.
 # HINT: Create a function, assign it to 'key'.
+def key_func(person):
+    return person['score']
+people.sort(key=key_func, reverse=True)
+print(people)
 # HINT 2: Look at `operator.itemgetter` (Fluent Python Ch 7)
